@@ -2,8 +2,7 @@
 
 using namespace std; 
 
-
-class Passenger { 
+class AirlinePassenger { 
  public: 
  	char name[50]; 
  	int age; 
@@ -11,7 +10,7 @@ class Passenger {
  	string departureTime;
  	string source; 
  	
- 	void storeData(){
+ 	void storeData() {
  		cout << "Enter Name: " << endl;
  		cin.getline(name,sizeof(name));
  		cout << "Enter age: " << endl;
@@ -22,22 +21,20 @@ class Passenger {
  		cin >> departureTime;
  		cout << "Source: " << endl;
  		cin >> source;
- 		
  		cout << "Data has been stored";
 	 }
  	
- 	void showInfo(){
+ 	void showInfo() {
  		cout << "age: " << age<< endl;
  		cout << "name: " << name<< endl;
  		cout << "flight number: " << flightNumber<< endl;
  		cout << "departure time: " << departureTime<< endl;
- 		cout << "source: " << source<< endl;
- 	
+ 		cout << "source: " << source<< endl;	
 	 }
 };
 
-int main(){
-	Passenger pass1;
+int main() {
+	AirlinePassenger pass1;
 	pass1.storeData();
 	pass1.showInfo();
 }
